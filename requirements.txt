@@ -2,3 +2,7 @@ polars
 duckdb
 pytest
 pyarrow
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
