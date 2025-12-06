@@ -127,7 +127,3 @@ The summary report includes:
 - `value_avg`: Average value on 2024-01-02
 - `increase_in_value`: Increase from 2024-01-01 to 2024-01-02
 - `samples_cnt`: Number of samples
-
-## License
-
-Internal project for Razor Labs.
