@@ -16,9 +16,6 @@ class CSVExtractor(Extractor):
         data_dfs = []
         for file_path in self.data_files:
             if os.path.exists(file_path):
-                # Read CSV, assuming standard format. 
-                # We might need to handle specific parsing options if needed, 
-                # but Polars is usually good at auto-detecting.
                 df = pl.read_csv(file_path, null_values=["ERR", "NA"])
                 data_dfs.append(df)
             else:
