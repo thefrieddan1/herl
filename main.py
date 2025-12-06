@@ -3,9 +3,9 @@ from etl import CSVExtractor, SensorDataTransformer, DuckDBLoader, ETLPipeline
 
 def main():
     # Configuration
-    DATA_FILES = ["2024-01-01.csv", "2024-01-02.csv"]
-    SENSORS_FILE = "Sensors.csv"
-    MACHINES_FILE = "Machines.csv"
+    DATA_FILES = ["data/2024-01-01.csv", "data/2024-01-02.csv"]
+    SENSORS_FILE = "data/Sensors.csv"
+    MACHINES_FILE = "data/Machines.csv"
     DB_PATH = "sensors.db"
     TABLE_NAME = "sensor_readings"
 

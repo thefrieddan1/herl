@@ -45,12 +45,12 @@ async def generate_report(
                 f.write(content)
             sensor_file_paths.append(file_path)
         
-        sensors_file_path = os.path.join(temp_dir, "Sensors.csv")
+        sensors_file_path = os.path.join(temp_dir, "data/Sensors.csv")
         with open(sensors_file_path, "wb") as f:
             content = await sensors_metadata.read()
             f.write(content)
         
-        machines_file_path = os.path.join(temp_dir, "Machines.csv")
+        machines_file_path = os.path.join(temp_dir, "data/Machines.csv")
         with open(machines_file_path, "wb") as f:
             content = await machines_metadata.read()
             f.write(content)

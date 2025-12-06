@@ -43,6 +43,6 @@ SELECT
     r.increase_in_value,
     r.samples_cnt
 FROM ranked_increases r
-LEFT JOIN read_csv_auto('Machines.csv') m ON r.machine_code = m.machine_code
+LEFT JOIN read_csv_auto('data/Machines.csv') m ON r.machine_code = m.machine_code
 WHERE r.rn = 1
 ORDER BY r.increase_in_value DESC;
