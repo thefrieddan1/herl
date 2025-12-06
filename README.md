@@ -6,6 +6,7 @@ This project implements an ETL infrastructure for sensor data with SQL-based rep
 
 ```
 .
+├── data/                   # Sensor data files
 ├── etl/                    # ETL pipeline components
 │   ├── base.py            # Abstract base classes
 │   ├── extractors.py      # CSV data extraction
