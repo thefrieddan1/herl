@@ -25,9 +25,6 @@ class SensorDataTransformer(Transformer):
         # Convert Timestamp to epoch microseconds
         # Assuming Timestamp is in ISO 8601 format like '2024-01-01T00:00:00'
         
-        # We need to parse the string to datetime first, then to epoch microseconds
-        # Polars str.to_datetime() usually works well.
-        
         transformed_df = joined_df.with_columns([
             pl.col("Timestamp").str.to_datetime().dt.epoch(time_unit="us").alias("sample_time"),
             pl.lit(datetime.now()).alias("inserted_at"),

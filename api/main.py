@@ -76,7 +76,6 @@ async def generate_report(
             query = f.read().strip().rstrip(';')
         
         # Execute query
-        # Need to change to temp_dir for Machines.csv reference in SQL
         original_dir = os.getcwd()
         os.chdir(temp_dir)
         
