@@ -49,8 +49,10 @@ def test_summary_report(tmp_path):
     
     con.close()
     
-    # Create Machines.csv in tmp_path
-    machines_csv = tmp_path / "Machines.csv"
+    # Create data subdirectory and Machines.csv in it
+    data_dir = tmp_path / "data"
+    data_dir.mkdir(exist_ok=True)
+    machines_csv = data_dir / "Machines.csv"
     machines_csv.write_text("machine_code,machine_name\nM1,Machine One\nM2,Machine Two\n")
     
     # Read SQL query

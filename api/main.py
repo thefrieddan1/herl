@@ -36,6 +36,10 @@ async def generate_report(
     temp_dir = tempfile.mkdtemp()
     
     try:
+        # Create data subdirectory in temp directory
+        data_dir = os.path.join(temp_dir, "data")
+        os.makedirs(data_dir, exist_ok=True)
+        
         # Save uploaded files to temp directory
         sensor_file_paths = []
         for sensor_file in sensor_files:
